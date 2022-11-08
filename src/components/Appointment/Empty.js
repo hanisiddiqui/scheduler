@@ -1,5 +1,7 @@
 import React from "react";
 
+import useVisualMode from "../../hooks/useVisualMode";
+
 export default function Empty (props) {
   return(
     <main className="appointment__add">

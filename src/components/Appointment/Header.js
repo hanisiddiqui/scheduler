@@ -1,5 +1,7 @@
 import React from "react";
 
+import useVisualMode from "../../hooks/useVisualMode";
+
 export default function Header (props) {
   return(
     <header className="appointment__time">

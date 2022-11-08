@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import useVisualMode from "../../hooks/useVisualMode";
+
 import Button from "../Button";
 import InterviewerList from "../InterviewerList";
 

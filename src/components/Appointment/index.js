@@ -1,6 +1,7 @@
 import React from "react";
 
 import useVisualMode from "../../hooks/useVisualMode";
+import Form from "./Form";
 
 import Header from "./Header";
 import Show from "./Show";
@@ -24,6 +25,13 @@ export default function Appointment (props) {
         <Show
           student={props.interview.student}
           interviewer={props.interview.interviewer}
+        />
+      )}
+      {mode === CREATE && (
+        <Form 
+          interviewers={props.interviewers} 
+          onSave={() => console.log("onSave")} 
+          onCancel={() => back()}
         />
       )}
     </article>

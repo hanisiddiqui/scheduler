@@ -8,18 +8,18 @@ export function getAppointmentsForDay(state, day) {
     return [];
   }
 
-  let appointmentIDs = [];
+  let interviewerIDs = [];
 
   for (let item of state.days) {
     if (item.name === day) {
-      appointmentIDs = item.appointments;
+      interviewerIDs = item.appointments;
     }
   };
 
   const appointments = [];
 
   for (let key in state.appointments) {
-    if (appointmentIDs.includes(state.appointments[key].id)) {
+    if (interviewerIDs.includes(state.appointments[key].id)) {
       appointments.push(state.appointments[key]);
     }
   };
@@ -39,4 +39,22 @@ export function getInterview(state, interview) {
   };
 
   return interviewerData;
+};
+
+
+export function getInterviewersForDay(state, day) {
+
+  if (!state.days) {
+    return [];
+  } 
+
+  let interviewerIDs = [];
+
+  for (let item of state.days) {
+    if (item.name === day) {
+      interviewerIDs = item.interviewers;
+    }
+  };
+
+  return interviewerIDs.map(interviewerID => state.interviewers[interviewerID]);
 };

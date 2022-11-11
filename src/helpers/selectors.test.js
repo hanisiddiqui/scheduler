@@ -6,19 +6,22 @@ const state = {
       id: 1,
       name: "Monday",
       appointments: [1, 2, 3],
-      interviewers: [1, 2]
+      interviewers: [1, 2],
+      spots: 2
     },
     {
       id: 2,
       name: "Tuesday",
       appointments: [4, 5],
-      interviewers: [1]
+      interviewers: [1],
+      spots: 1
     },
     {
       id: 3,
       name: "Friday",
       appointments: [],
-      interviewers: []
+      interviewers: [],
+      spots: 0
     }
   ],
   appointments: {

@@ -23,17 +23,18 @@ npm run storybook
 ```
 ## Final Product
 
-Desktop View 
+Initial State
 
-![Desktop View](https://github.com/hanisiddiqui/tweeter/blob/master/docs/tweeter-desktop.png)
+![Initial State](https://github.com/hanisiddiqui/scheduler/blob/master/docs/home-view.png)
 
-Mobile View 
+Appointment Form
 
-![Mobile View](https://github.com/hanisiddiqui/tweeter/blob/master/docs/tweeter-mobile.png)
+![Appointment Form](https://github.com/hanisiddiqui/scheduler/blob/master/docs/form-view.png)
 
-## Dependencies
+Appointment Confirmed
 
-  - body-parser
-  - chance
-  - express
-  - md5
+![Appointment Confirmed](https://github.com/hanisiddiqui/scheduler/blob/master/docs/confirmed-view.png)
+
+Deletion Confirmation
+
+![Deletion Confirmation](https://github.com/hanisiddiqui/scheduler/blob/master/docs/delete-confirmation.png)

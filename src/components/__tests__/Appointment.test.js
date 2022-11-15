@@ -1,15 +1,19 @@
 import React from "react";
 
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, waitForElement, fireEvent } from "@testing-library/react";
 
 import Application from "components/Application";
-import Appointment from "../Appointment/index";
 
 afterEach(cleanup);
 
 describe("Appointment", () => {
-  it("renders without crashing", () => {
-    render(<Appointment />);
+  it("defaults to Monday and changes the schedule when a new day is selected", () => {
+    const { getByText } = render(<Application />);
+
+    return waitForElement(() => getByText("Monday")).then(() => {
+      fireEvent.click(getByText("Tuesday"));
+      expect(getByText("Leopold Silvers")).toBeInTheDocument();
+    });
   });
 
   it("does something it is supposed to do", () => {
@@ -18,5 +22,15 @@ describe("Appointment", () => {
 
   it("does something else it is supposed to do", () => {
     // ...
+  });
+
+  it("changes the schedule when a new day is selected", async () => {
+    const { getByText } = render(<Application />);
+
+    await waitForElement(() => getByText("Monday"));
+
+    fireEvent.click(getByText("Tuesday"));
+
+    expect(getByText("Leopold Silvers")).toBeInTheDocument();
   });
 });

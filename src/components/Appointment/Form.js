@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-import useVisualMode from "../../hooks/useVisualMode";
-
 import Button from "../Button";
 import InterviewerList from "../InterviewerList";
 
@@ -31,6 +29,7 @@ export default function Form(props) {
       return;
     }
 
+    setError("");
     props.onSave(student, interviewer);
   }
 

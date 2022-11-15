@@ -1,6 +1,3 @@
-import React, { Fragment, useState, useEffect } from "react";
-import axios from "axios";
-
 
 export function getAppointmentsForDay(state, day) {
 
